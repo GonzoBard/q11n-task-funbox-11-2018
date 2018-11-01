@@ -17,6 +17,16 @@
   margin: 3px;
 
   position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include wh100();
+
+    background: transparent url("../img/cat.png") no-repeat -27px 205px;
+  }
 }
 
 .catalog-item__top--item--bg-folded-corner {

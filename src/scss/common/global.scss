@@ -16,20 +16,10 @@ body {
   font-family: "Trebuchet MS", Tahoma, sans-serif;
   @include fonts(13px, $font-height-normal, $font-weight-normal, normal, $color-white);
 
-  background-image: url(../img/bg.png);
-  position: relative;
-}
-
-body::after {
-  content: '';
-  //display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  @include wh100();
-
-  background-image: linear-gradient(to bottom, black, transparent, black);
-  opacity: 0.5;
+  background-color: $color-black85;
+  background-image: linear-gradient(to bottom, $color-black55, transparent, $color-black55),
+  url(../img/bg.png);
+  background-attachment: fixed, scroll;
 }
 
 img {

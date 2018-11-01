@@ -1,0 +1,28 @@
+{
+  "name": "q11n-task-funbox-11-2018",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The letter templates for module Nevis of Do|While|For|Each",
+  "scripts": {
+    "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss --fix",
+    "test": "npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "dependencies": {
+    "stylelint-config-sass-guidelines": "^5.x.x"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.x.x",
+    "browser-sync": "^2.x.x",
+    "del": "^3.x.x",
+    "gulp": "^3.x.x",
+    "gulp-clean-css": "^3.x.x",
+    "gulp-postcss": "^8.x.x",
+    "gulp-rename": "^1.x.x",
+    "gulp-sass": "^4.x.x",
+    "gulp-uglify": "^3.x.x",
+    "run-sequence": "^2.x.x",
+    "stylelint": "9.x.x"
+  }
+}

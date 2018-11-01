@@ -1,4 +1,57 @@
-.catalog-item {
+@import "../common/config";
 
+.catalog-item {
+  width: 318px;
 }
 
+.catalog-tem__top {
+  background-color: $color-white;
+  //display: flex;
+  //flex-direction: column;
+}
+
+.catalog-item__intro {
+  @include reset-margin-padding();
+  padding-top: 23px;
+  padding-left: 44px;
+  @include fonts(14px, $font-height-normal, $font-weight-normal, normal, $color-dove-gray);
+  letter-spacing: 1px;
+}
+
+.catalog-item__trademark {
+  @include reset-margin-padding();
+  padding-top: 8px;
+  padding-left: 42px;
+  @include fonts(48px, $font-height-normal, $font-weight-bold, normal, $color-black);
+}
+
+.catalog-item__additive {
+  @include reset-margin-padding();
+  margin-top: -2px;
+  padding-left: 42px;
+  @include fonts(24px, 24px, $font-weight-bold, normal, $color-black);
+}
+
+.catalog-item__benefit {
+  //margin-bottom: 270px;
+  margin-top: 18px;
+
+  p {
+    @include reset-margin-padding();
+    padding-left: 43px;
+    @include fonts(14px, 16px, $font-weight-normal, normal, $color-dove-gray);
+  }
+}
+
+.catalog-item__weight {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  @include reset-margin-padding();
+
+  background-color: $color-pacific-blue;
+  border-radius: 50%;
+  border-width: 0;
+  text-align: center;
+  vertical-align: center;
+}

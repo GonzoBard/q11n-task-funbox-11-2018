@@ -1,8 +1,7 @@
 @import "../common/config";
 
 .catalog {
-  width: 100%;
-  height: 100%;
+  @include wh100();
 
   display: flex;
   flex-direction: column;
@@ -11,9 +10,10 @@
 }
 
 .catalog__title {
-  font-family: 'Exo 2', sans-serif;
   @include reset-margin-padding();
   margin-bottom: 37px;
+
+  font-family: 'Exo 2', sans-serif;
   @include fonts(36px, 36px, $font-weight-thin, normal, $color-white);
   text-align: center;
 }
@@ -48,7 +48,7 @@
     margin-right: 80px;
   }
 
-  .catalog__item:last-child{
+  .catalog__item:last-child {
     margin-right: 80px;
     margin-left: 80px;
   }
@@ -65,7 +65,7 @@
     margin-right: 80px;
   }
 
-  .catalog__item:last-child{
+  .catalog__item:last-child {
     margin-right: 0;
     margin-left: 0;
   }

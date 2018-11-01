@@ -9,16 +9,7 @@
 }
 
 .catalog-tem__top-wrap--bg-folded-corner {
-  $color: $color-pacific-blue;
-  background: linear-gradient(to bottom right, transparent 49.9%, $color 50%),
-  linear-gradient(to right, $color, $color),
-  linear-gradient(to right, $color, $color);
-  background-size: 40px 40px, 100% 100%, 100% 100%;
-  background-position: left 0, left 40px, 39.5px 100%;
-  background-repeat: no-repeat;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  @include folded-corner($color-pacific-blue, 40px, 10px);
 }
 
 .catalog-tem__top {
@@ -30,16 +21,7 @@
 }
 
 .catalog-tem__top--item--bg-folded-corner {
-  $color: $color-white;
-  background: linear-gradient(to bottom right, transparent 49.9%, $color 50%),
-  linear-gradient(to right, $color, $color),
-  linear-gradient(to right, $color, $color);
-  background-size: 40px 40px, 100% 100%, 100% 100%;
-  background-position: left 0, left 40px, 39.5px 100%;
-  background-repeat: no-repeat;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  @include folded-corner($color-white, 40px, 8px);
 }
 
 .catalog-item__intro {
@@ -66,6 +48,7 @@
 .catalog-item__benefit {
   margin-top: 16px;
   margin-bottom: 288px;
+  //margin-bottom: 20px;
 
   p {
     @include reset-margin-padding();
@@ -116,4 +99,9 @@
   color: $color-pacific-blue;
   border-bottom: 1px dashed $color-pacific-blue;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-dodger-blue;
+  }
 }

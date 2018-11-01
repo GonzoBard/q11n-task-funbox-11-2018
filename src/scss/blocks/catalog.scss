@@ -13,24 +13,60 @@
 .catalog__title {
   font-family: 'Exo 2', sans-serif;
   @include reset-margin-padding();
-  margin-top: 41px;
   margin-bottom: 37px;
-  @include fonts(36px, 36px, $font-weight-thin, normal, $color-white)
+  @include fonts(36px, 36px, $font-weight-thin, normal, $color-white);
+  text-align: center;
 }
 
 .catalog__list {
-  width: 100%;
   @include reset-list();
   margin-top: -10px;
 
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex-shrink: 0;
 }
 
-.catalog__item:not(:last-child) {
-  margin-right: 80px;
+//
+// ADAPTIVE
+//
+@include media-mobile {
+
+}
+
+@include media-tablet {
+
+  .catalog__list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item:first-child {
+    margin-right: 80px;
+  }
+
+  .catalog__item:last-child{
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+
+}
+
+@include media-desktop {
+
+  .catalog {
+    justify-content: center;
+  }
+
+  .catalog__item:not(:last-child) {
+    margin-right: 80px;
+  }
+
+  .catalog__item:last-child{
+    margin-right: 0;
+    margin-left: 0;
+  }
 }

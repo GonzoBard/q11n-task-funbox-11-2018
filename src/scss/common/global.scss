@@ -12,11 +12,25 @@ body {
 }
 
 body {
-
+  min-width: $grid-breakpoint-mobile;
   font-family: "Trebuchet MS", Tahoma, sans-serif;
   @include fonts(13px, $font-height-normal, $font-weight-normal, normal, $color-white);
 
   background-image: url(../img/bg.png);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, black, transparent, black);
+  opacity: 0.5;
+  z-index: -1;
 }
 
 img {

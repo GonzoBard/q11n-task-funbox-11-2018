@@ -9,9 +9,10 @@
 }
 
 .catalog-tem__top-wrap--bg-folded-corner {
-  background: linear-gradient(to bottom right, transparent 49.9%, #0095DB 50%),
-  linear-gradient(to right, #0095DB, #0095DB),
-  linear-gradient(to right, #0095DB, #0095DB);
+  $color: $color-pacific-blue;
+  background: linear-gradient(to bottom right, transparent 49.9%, $color 50%),
+  linear-gradient(to right, $color, $color),
+  linear-gradient(to right, $color, $color);
   background-size: 40px 40px, 100% 100%, 100% 100%;
   background-position: left 0, left 40px, 39.5px 100%;
   background-repeat: no-repeat;
@@ -24,12 +25,15 @@
   width: 100%;
   height: 100%;
   margin: 3px;
+
+  position: relative;
 }
 
 .catalog-tem__top--item--bg-folded-corner {
-  background: linear-gradient(to bottom right, transparent 49.9%, white 50%),
-  linear-gradient(to right, white, white),
-  linear-gradient(to right, white, white);
+  $color: $color-white;
+  background: linear-gradient(to bottom right, transparent 49.9%, $color 50%),
+  linear-gradient(to right, $color, $color),
+  linear-gradient(to right, $color, $color);
   background-size: 40px 40px, 100% 100%, 100% 100%;
   background-position: left 0, left 40px, 39.5px 100%;
   background-repeat: no-repeat;
@@ -61,7 +65,7 @@
 
 .catalog-item__benefit {
   margin-top: 16px;
-  margin-bottom: 205px;
+  margin-bottom: 288px;
 
   p {
     @include reset-margin-padding();
@@ -71,6 +75,10 @@
 }
 
 .catalog-item__weight {
+  position: absolute;
+  bottom: 14px;
+  right: 12px;
+
   display: inline-block;
   width: 80px;
   height: 80px;
@@ -83,9 +91,29 @@
   vertical-align: center;
 }
 
+.catalog-item__weight-value {
+  @include reset-margin-padding();
+  padding-top: 11px;
+  @include fonts(42px, 42px, $font-weight-normal, normal, $color-white);
+}
+
+.catalog-item__weight-measure-unit {
+  @include reset-margin-padding();
+  margin-top: -1px;
+  @include fonts(21px, 21px, $font-weight-normal, normal, $color-white);
+}
+
 .catalog-item__bottom {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  @include fonts(13px, 15px, $font-weight-normal, normal, $color-white);
+}
+
+.catalog-item__bottom-link {
+  color: $color-pacific-blue;
+  border-bottom: 1px dashed $color-pacific-blue;
+  text-decoration: none;
 }
